@@ -1,0 +1,27 @@
+.products-page {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+  
+  .products-page.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .page-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
