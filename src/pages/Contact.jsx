@@ -10,8 +10,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission
-    window.location.href = `mailto:contact@firesafe.com?subject=Inquiry&body=${formData.message}`
+    const recipientEmail = "mbuthiaeddy@gmail.com"; // Replace with your email address
+    const subject = `Inquiry from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipientEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, '_blank'); // Opens Gmail in a new tab
   }
 
   return (

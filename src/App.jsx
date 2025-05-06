@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/fire-equipment-store">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
